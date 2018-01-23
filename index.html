@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <title>first</title>
+  </head>
+  <body>
+
+      <div class="container" ng-app="myShoppingList" ng-controller="myCtrl">
+        <h1 class="title">{{title}}</h1>
+        <p>{{errorText}}</p>
+        <ul>
+          <li ng-repeat="x in products">
+            {{x}}
+            <span ng-click="removeItem(index)">&times</span>
+          </li>
+        </ul>
+        <div class="footer">
+          <input ng-model="addMe" placeholder="add items">
+          <button ng-click="addItem()">Push</button>
+
+        </div>
+
+      </div>
+
+
+  <script type="text/javascript" src="exo.js">
+
+  </script>
+  </body>
+</html>
